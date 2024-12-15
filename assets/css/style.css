@@ -1,0 +1,405 @@
+/* Custom Colors */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ff0000;
+    --text-color: #ffffff;
+}
+
+/* Estilos Globais */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Layout Base */
+.container {
+    padding: 20px;
+}
+
+/* Cards e Painéis */
+.card, .stats-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card .card-title {
+    color: #000;
+    font-weight: 600;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card .card-content {
+    padding: 24px;
+}
+
+/* Estatísticas */
+.stats-card {
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.stats-card:hover {
+    transform: translateY(-2px);
+}
+
+.dashboard-stat {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+}
+
+.dashboard-label {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Totais e Valores */
+.total-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.total-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.total-item:hover {
+    transform: translateY(-2px);
+}
+
+.total-label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.total-value {
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #000;
+}
+
+.total-value.highlight {
+    color: #ff0000;
+}
+
+.total-count {
+    display: block;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* Tabelas */
+table.highlight tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+table thead th {
+    color: #000;
+    font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.status-paid {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-pending {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+/* Formulários */
+.input-field label {
+    color: #666;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=password]:focus + label {
+    color: #ff0000;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #ff0000;
+    box-shadow: 0 1px 0 0 #ff0000;
+}
+
+/* Botões */
+.btn-filter {
+    background-color: #ff0000;
+    color: white;
+}
+
+.btn-filter:hover {
+    background-color: #cc0000;
+}
+
+.btn-clear {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.btn-clear:hover {
+    background-color: #e9ecef;
+}
+
+/* Filtros */
+.filter-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ícones */
+.material-icons {
+    color: rgb(255, 255, 255);
+}
+
+/* Navegação */
+nav {
+    background-color: #000;
+}
+
+nav .brand-logo {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+nav ul a {
+    color: #fff;
+}
+
+.dropdown-content li > a {
+    color: #000;
+}
+
+.dropdown-content li > a:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    
+    .stats-card {
+        margin-bottom: 15px;
+    }
+}
+
+/* Utilitários */
+.red-accent {
+    color: #ff0000 !important;
+}
+
+.black-theme {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Login Page Styles */
+.login-page {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login-page .card {
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.login-page .card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Navbar */
+.brand-logo {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+/* Logo */
+.brand-logo img {
+    height: 50px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 992px) {
+    .brand-logo img {
+        height: 45px;
+        margin-top: 5px;
+    }
+}
+
+/* Header */
+nav {
+    height: 84px;
+    line-height: 84px;
+}
+
+.nav-wrapper .container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.brand-logo {
+    padding-left: 0 !important;
+}
+
+.nav-wrapper ul.right {
+    margin-right: 0;
+}
+
+nav i.material-icons {
+    height: 84px;
+    line-height: 84px;
+}
+
+nav .sidenav-trigger i {
+    height: 84px;
+    line-height: 84px;
+}
+
+@media only screen and (min-width: 993px) {
+    .nav-wrapper .container {
+        width: 85%;
+    }
+}
+
+/* Containers */
+.container {
+    margin-top: 20px;
+}
+
+/* Cards */
+.card {
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: var(--secondary-color) !important;
+}
+
+.btn:hover {
+    background-color: #cc0000 !important;
+}
+
+/* Card Panel Styles */
+.card-panel {
+    border-left: 4px solid var(--secondary-color);
+}
+
+/* Tables */
+table.striped > tbody > tr:nth-child(odd) {
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+/* Form Styles */
+.input-field input:focus + label {
+    color: var(--secondary-color) !important;
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid var(--secondary-color) !important;
+    box-shadow: 0 1px 0 0 var(--secondary-color) !important;
+}
+
+.input-field {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Botões */
+.btn-group {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-small {
+    padding: 0 8px;
+}
+
+.btn-small i {
+    font-size: 1.2rem;
+}
+
+/* Badges */
+.badge {
+    border-radius: 2px;
+    padding: 5px 12px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* Modals */
+.modal {
+    max-width: 600px;
+}
+
+.modal .modal-content {
+    padding: 24px;
+}
+
+/* Switch Styles */
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #ff6666;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media only screen and (max-width: 992px) {
+    .brand-logo {
+        margin-left: 0;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .btn-group {
+        flex-wrap: wrap;
+    }
+}

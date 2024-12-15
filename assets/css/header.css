@@ -1,0 +1,160 @@
+/* Header Styles */
+.main-header {
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.main-header.scrolled {
+    background: rgba(26, 35, 126, 0.98);
+    backdrop-filter: blur(10px);
+}
+
+.main-header .nav-wrapper {
+    padding: 0 20px;
+}
+
+.main-header .brand-logo {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    transition: all 0.3s ease;
+}
+
+.main-header .brand-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.main-header .nav-links {
+    margin-right: 15px;
+}
+
+.main-header .nav-links li a {
+    font-weight: 500;
+    position: relative;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.main-header .nav-links li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+}
+
+.main-header .nav-links li a:hover:before {
+    width: 100%;
+}
+
+.main-header .nav-links li a i {
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.main-header .nav-links li a:hover i {
+    transform: translateY(-2px);
+}
+
+.user-dropdown {
+    min-width: 200px !important;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 64px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+}
+
+.user-dropdown li a {
+    padding: 15px 20px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.user-dropdown li a i {
+    margin-right: 10px;
+    color: #666;
+}
+
+.user-dropdown li a:hover {
+    background-color: #f5f5f5;
+}
+
+.user-dropdown li a.red-text:hover {
+    background-color: #ffebee;
+}
+
+.user-dropdown .divider {
+    margin: 5px 0;
+}
+
+/* Mobile Navigation */
+.sidenav {
+    padding-top: 0;
+}
+
+.sidenav .user-view {
+    padding: 32px 32px 16px;
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+}
+
+.sidenav .user-view .name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.sidenav .user-view .email {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.sidenav li a {
+    font-weight: 500;
+    padding: 0 32px;
+    height: 54px;
+    line-height: 54px;
+}
+
+.sidenav li a i {
+    margin-right: 16px;
+    color: #666;
+}
+
+.sidenav li a:hover {
+    background-color: #f5f5f5;
+}
+
+.sidenav li a.red-text i {
+    color: #f44336;
+}
+
+/* Adicionar padding ao conteúdo principal para compensar o header fixo */
+main {
+    padding-top: 64px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 992px) {
+    .main-header .brand-logo {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        padding-top: 56px;
+    }
+}
